@@ -15,17 +15,17 @@ class TestingModels(TestCase):
         self.assertEqual(work.points, 75, 'points')
 
     def test_user(self):
-        user = User(email='testing@gmail.com', password='testing', first_name='tester', team_leader=True,
+        user = User(email='testing@gmail.com', password='testing', first_name='Mihlali', team_leader=True,
                     points=100)
 
         self.assertEqual(user.email, 'testing@gmail.com', 'test email')
         self.assertEqual(user.password, 'testing', 'password')
-        self.assertEqual(user.first_name, 'tester')
+        self.assertEqual(user.first_name, 'Mihlali')
         self.assertIsNotNone(user.notes)
         self.assertIsNotNone(user.work)
         self.assertEqual(user.points, 100, 'points')
 
     def test_team(self):
-        team = Team(name='tester')
-        self.assertEqual(team.name, 'tester')
+        team = Team(name='Quality Assurance')
+        self.assertEqual(team.name, 'Quality Assurance')
         self.assertIsNotNone(team.users)
