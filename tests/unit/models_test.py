@@ -4,7 +4,7 @@ from website.models import Note, Work, User, Team
 
 class TestingModels(TestCase):
     def test_note(self):
-        note = Note(data='test', date=17 / 5 / 2021, user_id=1)
+        note = Note(data='test',  user_id=1,date=5 / 20/ 2021)
         self.assertEqual(note.data, 'test', "Testing")
         self.assertEqual(note.user_id, 1, "test user id")
 
