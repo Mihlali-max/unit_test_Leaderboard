@@ -9,7 +9,7 @@ class TestingModels(TestCase):
         self.assertEqual(note.user_id, 1, "test user id")
 
     def test_work(self):
-        work = Work(title='test', description='working', user_id=2, status='online', points=75)
+        work = Work(title='test', user_id=2, points=75, status='online',description='working')
         self.assertEqual(work.title, 'test', "Testing")
         self.assertEqual(work.user_id, 2, 'user id')
         self.assertEqual(work.points, 75, 'points')
@@ -19,11 +19,11 @@ class TestingModels(TestCase):
                     points=100)
 
         self.assertEqual(user.email, 'testing@gmail.com', 'test email')
-        self.assertEqual(user.password, 'testing', 'test password')
+        self.assertEqual(user.password, 'testing', 'password')
         self.assertEqual(user.first_name, 'tester')
         self.assertIsNotNone(user.notes)
         self.assertIsNotNone(user.work)
-        self.assertEqual(user.points, 100, 'test points')
+        self.assertEqual(user.points, 100, 'points')
 
     def test_team(self):
         team = Team(name='tester')
